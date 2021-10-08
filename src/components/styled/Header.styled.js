@@ -34,6 +34,10 @@ const Header = styled.form`
       --webkit-appearance: none;
       padding: 10px 10px;
       font-size: 1.1rem;
+      color: darkgoldenrod;
+    }
+
+    button:first-of-type {
       color: #245;
     }
 

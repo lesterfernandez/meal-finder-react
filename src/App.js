@@ -35,9 +35,24 @@ function App() {
     setInput("");
   };
 
+  const randomSearch = async () => {
+    clear();
+    const result = await (
+      await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+    ).json();
+
+    setMeals(result.meals);
+  };
+
   return (
     <StyledApp>
-      <Header search={search} handleChange={handleChange} input={input} clear={clear}/>
+      <Header
+        search={search}
+        handleChange={handleChange}
+        input={input}
+        clear={clear}
+        randomSearch={randomSearch}
+      />
       <Content meals={meals} />
     </StyledApp>
   );

@@ -1,10 +1,10 @@
 import StyledHeader from "./styled/Header.styled";
 
-const Header = ({ search, handleChange, input, clear }) => {
+const Header = ({ search, handleChange, input, clear, randomSearch }) => {
   return (
     <>
       <StyledHeader onSubmit={search}>
-        <h1>Meal Finder</h1>
+        <h1>Meal Finder made with React</h1>
         <div>
           <input
             placeholder="Enter text here..."
@@ -13,6 +13,9 @@ const Header = ({ search, handleChange, input, clear }) => {
           />
           <button type="submit">
             <i className="fas fa-search" />
+          </button>
+          <button onClick={randomSearch}>
+            <i className="fas fa-random" />
           </button>
           <button onClick={clear}>
             <i className="fas fa-ban" />

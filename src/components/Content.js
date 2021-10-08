@@ -1,12 +1,13 @@
+import Meal from "./Meal";
 import StyledContent from "./styled/Content.styled";
 
 const Content = ({ meals }) => {
   return (
     <StyledContent>
-      {meals.length > 0
-        ? meals.map(meal => (
-            <img key={meal.idMeal} src={meal.strMealThumb} alt="meal img" />
-          ))
+      {meals.length > 1
+        ? meals.map(meal => <Meal meal={meal} />)
+        : meals.length === 1
+        ? "single meal"
         : ""}
     </StyledContent>
   );
