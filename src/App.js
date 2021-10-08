@@ -53,7 +53,7 @@ function App() {
         clear={clear}
         randomSearch={randomSearch}
       />
-      <Content meals={meals} />
+      <Content meals={meals} setMeals={setMeals}/>
     </StyledApp>
   );
 }

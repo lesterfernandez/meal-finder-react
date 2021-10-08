@@ -12,11 +12,24 @@ const Meal = styled.div`
   }
 
   &:hover {
-    div {
+    button {
       opacity: 1;
     }
   }
-  div {
+  button {
+    outline: 0;
+    border: 0;
+    appearance: none;
+    --moz-appearance: none;
+    --webkit-appearance: none;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -27,6 +40,9 @@ const Meal = styled.div`
     p {
       margin: auto;
     }
+  }
+  button:focus {
+    outline: 0;
   }
 `;
 
